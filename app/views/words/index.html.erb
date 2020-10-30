@@ -1,0 +1,7 @@
+<h1> Our language only has these words:</h1>
+
+<ul>
+    <% @words.each do |word|%>
+        <li><%= link_to word.word, word_path(word.id)%></li>
+    <% end %>
+</ul>
