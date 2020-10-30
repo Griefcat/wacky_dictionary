@@ -1,0 +1,13 @@
+<h1>Time to edit a word</h1>
+
+<%=form_for @word do |f|%>
+<%= f.label "Change your word:"%>
+<%= f.text_field :word %><br>
+<%= f.label "Change defintion:"%>
+<%= f.text_field :definition %><br>
+<%= f.label "Change part of Speech?:"%>
+<%= f.text_field :part_of_speech %><br>
+<%= f.label "Change sentence:"%>
+<%= f.text_field :example_sentence %><br>
+<%= f.submit "Update Your word!"%>
+<%end%>

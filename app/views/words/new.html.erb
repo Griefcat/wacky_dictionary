@@ -1,0 +1,14 @@
+<h1>Make your own word!</h1>
+
+<%=form_for @word, method: "post" do |f|%>
+<%= f.label "Your word:"%>
+<%= f.text_field :word %><br>
+<%= f.label "Defintion:"%>
+<%= f.text_field :definition %><br>
+<%= f.label "Part of Speech?:"%>
+<%= f.text_field :part_of_speech %><br>
+<%= f.label "Use it in a sentence, please:"%>
+<%= f.text_field :example_sentence %><br>
+<%= f.submit "Submit Your Word!"%>
+<%end%>
+

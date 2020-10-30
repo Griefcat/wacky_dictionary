@@ -4,3 +4,7 @@ Word: <%=@word.word%><br>
 Definition: <%=@word.definition%><br>
 Part of Speech: <%=@word.part_of_speech%><br>
 Used in a Sentence: <%=@word.example_sentence%><br>
+
+<%= link_to "Go back to the Wacky Dictionary", words_path %><br>
+
+<%= link_to "Edit this word", edit_word_path(@word.id) %>
