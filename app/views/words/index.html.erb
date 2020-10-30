@@ -2,10 +2,12 @@
 
 <ul>
     <% @words.each do |word|%>
-        <li><%= link_to word.word, word_path(word.id)%></li>
         
+        <li><%=link_to "Delete this word", word_path(word.id), method: "delete"%> <%=link_to word.word, word_path(word.id)%></li>
     <% end %>
 </ul>
+
+<%=link_to "Make your own word", new_word_path%>
  
 
  

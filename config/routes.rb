@@ -4,13 +4,14 @@ Rails.application.routes.draw do
   get "/", to: "static#home"
   get "/about", to: "static#about"
 
-  get "/words", to: "words#index"
-  get "/words/new", to: "words#new"
-  get "/words/:id", to: "words#show", as: "word"
-  post "/words/", to: "words#create", as: "new_word"
-  get "/words/:id/edit", to: "words#edit", as: "edit_word"
-  patch "/words/:id", to: "words#update", as: "update_word"
-  
+  resources :words, only: [:new, :create, :index, :show, :update, :destroy, :edit]
+  # get "/words", to: "words#index"
+  # get "/words/new", to: "words#new"
+  # get "/words/:id", to: "words#show", as: "word"
+  # post "/words/", to: "words#create", as: "new_word"
+  # get "/words/:id/edit", to: "words#edit", as: "edit_word"
+  # patch "/words/:id", to: "words#update", as: "update_word"
+  # delete "/words/:id", to: "words#destroy", as: "delete_word"
 
 
 

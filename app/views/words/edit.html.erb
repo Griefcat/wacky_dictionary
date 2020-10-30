@@ -6,8 +6,10 @@
 <%= f.label "Change defintion:"%>
 <%= f.text_field :definition %><br>
 <%= f.label "Change part of Speech?:"%>
-<%= f.text_field :part_of_speech %><br>
+<%= f.select_tag :part_of_speech, options_for_select(["noun", "verb", "adjective", "adverb"]) %><br>
 <%= f.label "Change sentence:"%>
-<%= f.text_field :example_sentence %><br>
+<%= f.text_area :example_sentence %><br>
 <%= f.submit "Update Your word!"%>
 <%end%>
+
+
